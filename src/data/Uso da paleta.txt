@@ -1,0 +1,8 @@
+Paleta background 0: Logo
+Paleta background 1: Fonte
+Paleta background 2: Campo
+
+Paleta Sprite 0: Bola e numero do ganhador
+Paleta Sprite 1: Jogador 1
+Paleta Sprite 2: Jogador 2
+Paleta Sprite 3: Marcador de opções do menu

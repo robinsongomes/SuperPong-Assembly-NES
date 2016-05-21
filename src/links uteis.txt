@@ -1,0 +1,18 @@
+Programacao 6502:
+http://skilldrick.github.io/easy6502/
+http://nintendoage.com/forum/messageview.cfm?catid=22&threadid=7155
+http://www.brgames.org/tutoriais/nesasmbyOdin.pdf
+http://patater.com/nes-asm-tutorials/
+http://www.obelisk.me.uk/6502/reference.html
+http://atari2600journal.bravejournal.com/entry/4695
+http://nintendoage.com/forum/messageview.cfm?catid=22&threadid=33287
+http://wiki.nesdev.com
+http://www.6502.org/tutorials/compare_beyond.html
+
+Mapeamento de memoria NES:
+https://en.wikibooks.org/wiki/NES_Programming
+https://en.wikibooks.org/wiki/NES_Programming/Memory_Map
+
+Outros:
+https://github.com/jtfmumm/6502asm-sublime
+https://github.com/toastynerd/nesasm

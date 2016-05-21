@@ -1,0 +1,106 @@
+ Devido ao modo como estou carregando os arquivos de nametable deve ser adicionado 4 linhas extras entre o fim do namatable e o 
+começo dos atributos.
+Isso se deve a rotina de carregamente do nametable:
+Quando o byte baixo lê até $FF é adicionado +1 ao byte alto
+ por exemplo:
+ 	$E000
+ 	$E001
+ 	$E002
+ 	...
+ 	...
+ 	$E0FF
+ 	$E100
+ 	$E101
+ 	...
+ 	...
+
+Para ler os atributos ele lê 4 blocos para baixo do começo. E como o nametable não preenche 4 blocos completos, deve adicionar 4 linhas com qualquer valor.
+
+No total o arquivo deve ficar com 68 linhas
+*O arquivo deve ser aberto e salvo com codificação Hexadecimal. O editor de texto Sublime pode ajudar nessa tarefa.
+
+Veja o exemplo:
+
+----1º Bloco -------
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffa7 a8a9 aaab
+acad aeaf cecf ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffb7 b8b9 babb
+bcbd bebf dedf ffff ffff ffff ffff ffff
+
+----2º Bloco -------
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ff30 3132 3334 3536 3738 393a
+3b3c 3d3e 3fa0 a1a2 a3a4 a5a6 ffff ffff
+ffff ffff ff40 4142 4344 4546 4748 494a
+4b4c 4d4e 4fb0 b1b2 b3b4 b5b6 ffff ffff
+ffff ffff ff50 5152 5354 5556 5758 595a
+5b5c 5d5e 5fc0 c1c2 c3c4 c5c6 ffff ffff
+ffff ffff ff60 6162 6364 6566 6768 696a
+6b6c 6d6e 6fd0 d1d2 d3d4 d5d6 ffff ffff
+ffff ffff ff70 7172 7374 7576 7778 797a
+7b7c 7d7e 7fe0 e1e2 e3e4 e5e6 ffff ffff
+ffff ffff ff80 8182 8384 8586 8788 898a
+8b8c 8d8e 8ff0 f1f2 f3f4 f5ff ffff ffff
+ffff ffff ff90 9192 9394 9596 9798 999a
+9b9c 9d9e 9ff6 f7f8 f9fa ffff ffff ffff
+
+----3º Bloco -------
+ffff ffc7 c8c8 c8c8 c8c8 c8c8 c8c8 c8c8
+c8c8 c8c8 c8c8 c8c8 c8c8 c8c8 c9ff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff 01ff 1318 100a
+0d18 1bff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff 02ff 1318 100a
+0d18 1b0e 1cff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+
+----4º Bloco -------
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ff1b 180b 1217 1c18 17ff 24ff 0200 0106
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+
+
+======= Adicionar 4 linhas ==========
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+ffff ffff ffff ffff ffff ffff ffff ffff
+----------------
+
+
+------Cor:------
+0000 0000 0000 0000 0000 0000 0000 0000
+0054 5555 5555 5500 0055 5555 5555 1500
+0405 0505 0505 0501 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+---------------
